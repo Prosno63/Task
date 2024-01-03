@@ -20,3 +20,5 @@ function addRegistrationRow(regId, fullName, age, gender, address, phoneNumber, 
     cells[5].textContent = phoneNumber;
     cells[6].textContent = monthlyIncome;
 }
+
+//inefficient
