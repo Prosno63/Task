@@ -2,12 +2,13 @@
 let registrationIdCounter = 1;
 
 function submitRegistration() {
-    var fullName = document.getElementById("fullName").value;
-    var age = document.getElementById("age").value;
-    var gender = document.getElementById("gender").value;
-    var address = document.getElementById("address").value;
-    var phoneNumber = document.getElementById("phoneNumber").value;
-    var monthlyIncome = document.getElementById("monthlyIncome").value;
+    
+    let fullName = document.getElementById("fullName").value;
+    let age = document.getElementById("age").value;
+    let gender = document.getElementById("gender").value;
+    let address = document.getElementById("address").value;
+    let phoneNumber = document.getElementById("phoneNumber").value;
+    let monthlyIncome = document.getElementById("monthlyIncome").value;
 
     if (fullName && age && gender && address && phoneNumber && monthlyIncome) {
         addRegistrationRow(registrationIdCounter, fullName, age, gender, address, phoneNumber, monthlyIncome);
@@ -19,13 +20,13 @@ function submitRegistration() {
 }
 
 function addRegistrationRow(regId, fullName, age, gender, address, phoneNumber, monthlyIncome) {
-    var tableBody = document.getElementById("registrationTableBody");
-    var newRow = tableBody.insertRow();
+    let tableBody = document.getElementById("registrationTableBody");
+    let newRow = tableBody.insertRow();
 
-    var cellValues = [regId, fullName, age, gender, address, phoneNumber, monthlyIncome];
+    let cellValues = [regId, fullName, age, gender, address, phoneNumber, monthlyIncome];
 
-    for (var i = 0; i < cellValues.length; i++) {
-        var cell = newRow.insertCell(i);
+    for (let i = 0; i < cellValues.length; i++) {
+        let cell = newRow.insertCell(i);
         cell.textContent = cellValues[i];
     }
 }
